@@ -99,10 +99,10 @@ This simulates real-world forecasting conditions.
 Rolling-origin CV results (mean across folds):
 
 Baseline (Seasonal Naive):  
-MAE = <BASELINE_MAE>
+MAE = 10199.879261904762
 
 XGBoost:  
-MAE = <XGB_MAE>
+MAE = 9310.283257902964
 
 Improvement vs baseline (MAE):  
 ~8.7%
