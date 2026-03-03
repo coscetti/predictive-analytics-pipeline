@@ -1,17 +1,26 @@
+# Virtual env
+.venv/
+
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.venv/
-venv/
-.env
+.pytest_cache/
+.mypy_cache/
 
-# Data & outputs
-data/raw/
-data/processed/
+# Data (never commit raw datasets)
+data/raw/*
+!data/raw/.gitkeep
+
+# Processed data (optional: keep out to reduce repo size)
+data/processed/*
+!data/processed/.gitkeep
+
+# Outputs / artifacts
 outputs/
 
-# OS / editors
+# OS / editor
 .DS_Store
 .vscode/
+.idea/

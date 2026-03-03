@@ -1,0 +1,37 @@
+dataset:
+  raw_csv_path: "data/raw/online_retail.csv"
+  date_col: "InvoiceDate"
+  qty_col: "Quantity"
+  price_col: "UnitPrice"
+
+kpi:
+  freq: "D"                 # daily
+  fill_missing_days: true
+  drop_returns: true        # Quantity<=0 or UnitPrice<=0 removed
+
+features:
+  lags: [1, 7, 14, 28]
+  rolling_windows: [7, 14, 28]
+  add_calendar: true        # dow, month
+
+cv:
+  initial_train_days: 180
+  horizon_days: 14
+  step_days: 14
+  n_folds: 6
+
+model:
+  type: "xgboost"
+  params:
+    n_estimators: 600
+    max_depth: 6
+    learning_rate: 0.05
+    subsample: 0.9
+    colsample_bytree: 0.9
+    reg_lambda: 1.0
+    random_state: 42
+
+output:
+  metrics_path: "outputs/metrics/metrics.json"
+  forecast_path: "outputs/forecasts/forecast.csv"
+  figure_path: "outputs/figures/forecast_vs_actual.png"
