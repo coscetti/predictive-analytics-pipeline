@@ -159,6 +159,44 @@ make run
 - XGBoost
 - Matplotlib
 
+## Roadmap / Future Improvements
+
+### Model & Forecasting
+- Hyperparameter optimization (Bayesian / Optuna)
+- Compare with additional models (LightGBM, Prophet, SARIMAX)
+- Add probabilistic forecasting (prediction intervals)
+- Multi-horizon direct forecasting instead of recursive
+
+### Feature Engineering
+- Add holiday calendar features
+- Encode promotional / seasonal effects
+- Automated feature selection
+- Lag importance analysis
+
+### Evaluation
+- Backtesting with longer horizon windows
+- Add additional business metrics (SMAPE, WAPE)
+- Model stability analysis across folds
+- Drift detection on residuals
+
+### Production Readiness
+- Docker containerization
+- CI pipeline (GitHub Actions)
+- Logging system (structured logging)
+- Data validation layer (schema checks)
+
+### Scalability
+- Batch pipeline abstraction
+- Refactor to modular ML service
+- Separate training and inference workflows
+- Experiment tracking (MLflow)
+
+### Visualization
+- Interactive dashboard (Streamlit)
+- Residual analysis plots
+- Feature importance visualization
+
+
 ## Author
 Simone Coscetti
 
