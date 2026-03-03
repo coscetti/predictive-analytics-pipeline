@@ -161,4 +161,5 @@ make run
 
 ## Author
 Simone Coscetti
+
 AI Systems Architect & Predictive Analytics Consultant
